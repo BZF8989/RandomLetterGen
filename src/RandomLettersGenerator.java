@@ -107,7 +107,7 @@ public class RandomLettersGenerator {
             int range = end - start - DIFFERENCE;
             int randomNumber = r.nextInt(range);
             if (randomNumber + start > 'Z') {
-                return LOWERCASE.charAt(randomNumber%NUMOFLOWERCASE);
+                return LOWERCASE.charAt((randomNumber + start)%NUMOFLOWERCASE);
             } else {
                 return UPPERCASE.charAt((start + randomNumber)%NUMOFUPPERCASE);
             }
